@@ -12,6 +12,6 @@ Loja pessoal de aplicativos para umbrelOS 2.0.
 Adicione https://github.com/RONALDOAMD9/ronaldo-umbrel-apps em App Store → Community App Stores e instale Tofa.
 Depois abra o aplicativo e vincule o servidor à sua conta Tofa. Ao adicionar a biblioteca, selecione `/media`.
 
-O ícone é uma ilustração própria deste pacote, não o logotipo oficial do Tofa.
+Ícone oficial do Tofa: https://app.tofa.tv/logo.svg
 
 Referências: https://tofa.tv/install e https://github.com/getumbrel/umbrel-community-app-store
