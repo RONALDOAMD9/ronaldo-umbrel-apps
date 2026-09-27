@@ -20,5 +20,8 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://app.tofa.tv/logo.svg
 repo: https://github.com/RONALDOAMD9/ronaldo-umbrel-apps
-gallery: []
+gallery:
+  - https://raw.githubusercontent.com/RONALDOAMD9/ronaldo-umbrel-apps/main/ronaldo-tofa/screenshots/1.png
+  - https://raw.githubusercontent.com/RONALDOAMD9/ronaldo-umbrel-apps/main/ronaldo-tofa/screenshots/2.png
+  - https://raw.githubusercontent.com/RONALDOAMD9/ronaldo-umbrel-apps/main/ronaldo-tofa/screenshots/3.png
 releaseNotes: Primeira versão do pacote Tofa para Umbrel.
