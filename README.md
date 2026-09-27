@@ -1,4 +1,4 @@
-# Ronaldo App Store
+# Expo App Store
 
 Loja pessoal de aplicativos para umbrelOS 2.0.
 
