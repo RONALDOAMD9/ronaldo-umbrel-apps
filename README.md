@@ -5,6 +5,7 @@ Loja pessoal de aplicativos para umbrelOS 2.0.
 ## Tofa
 
 - Imagem oficial: `ghcr.io/tofatv/tofa:beta` (tag mutável).
+- GPU Intel integrada do Core i5-12400: `/dev/dri` disponibilizado ao container para transcodificação por hardware.
 - Interface: porta `33333`, rede host conforme documentação do Tofa.
 - Dados persistentes: `${APP_DATA_DIR}/data` → `/data`.
 - Biblioteca: `Home/Videos` (`${UMBREL_ROOT}/home/Videos`) → `/media`, somente leitura.
