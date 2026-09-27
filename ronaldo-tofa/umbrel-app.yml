@@ -1,0 +1,24 @@
+manifestVersion: 1
+id: ronaldo-tofa
+name: Tofa
+tagline: Seu servidor pessoal de mídia
+category: media
+version: "beta"
+port: 33333
+description: >-
+  Servidor Tofa com banco de dados, backups, cache e logs persistentes
+  no armazenamento do aplicativo. A biblioteca de mídia é montada
+  somente para leitura. Após instalar, abra o aplicativo para vincular
+  o servidor à sua conta Tofa.
+developer: TofaTV
+website: https://tofa.tv
+submitter: Ronaldo
+support: https://docs.tofa.tv
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://raw.githubusercontent.com/RONALDOAMD9/ronaldo-umbrel-apps/main/ronaldo-tofa/icon.svg
+repo: https://github.com/RONALDOAMD9/ronaldo-umbrel-apps
+gallery: []
+releaseNotes: Primeira versão do pacote Tofa para Umbrel.
