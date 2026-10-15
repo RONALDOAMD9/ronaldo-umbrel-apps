@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: ronaldo-dockpeek
+category: developer-tools
+name: DockPeek
+version: "1.0.0"
+tagline: Acesse e acompanhe seus containers Docker
+description: >-
+  Painel para acessar interfaces web de containers Docker, consultar portas e logs
+  e verificar atualizacoes de imagens. Inclui um socket proxy privado.
+
+  O aplicativo tem acesso administrativo ao Docker. Prefira atualizar os apps
+  gerenciados pelo Umbrel pela propria App Store.
+developer: DockPeek
+website: https://github.com/dockpeek/dockpeek
+dependencies: []
+repo: https://github.com/dockpeek/dockpeek
+support: https://github.com/dockpeek/dockpeek/issues
+port: 3420
+path: ""
+defaultUsername: "umbrel"
+defaultPassword: ""
+torOnly: false
+releaseNotes: >-
+  Pacote inicial para umbrelOS 2.0 com app_proxy e Docker socket proxy privado.
+  A versao identifica o pacote; a imagem segue a tag latest oficial.
