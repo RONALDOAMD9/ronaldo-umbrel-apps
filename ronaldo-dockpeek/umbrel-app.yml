@@ -23,3 +23,7 @@ torOnly: false
 releaseNotes: >-
   Pacote inicial para umbrelOS 2.0 com app_proxy e Docker socket proxy privado.
   A versao identifica o pacote; a imagem segue a tag latest oficial.
+icon: https://raw.githubusercontent.com/RONALDOAMD9/ronaldo-umbrel-apps/main/ronaldo-dockpeek/Icon_dockpeek.png
+gallery:
+  - https://raw.githubusercontent.com/RONALDOAMD9/ronaldo-umbrel-apps/main/ronaldo-dockpeek/ssreen_dockpeek1.png
+  - https://raw.githubusercontent.com/RONALDOAMD9/ronaldo-umbrel-apps/main/ronaldo-dockpeek/screen_dockpeek.png
