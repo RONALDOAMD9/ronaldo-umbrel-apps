@@ -5,7 +5,7 @@ services:
       APP_HOST: ronaldo-tofa-trakt_server_1
       APP_PORT: 8787
   server:
-    image: ghcr.io/ronaldoamd9/tofa-trakt:1.0.0@sha256:56eb48122ad7db0ca128a5add66172dd88f41f762ddf12368a66069bf2f7c81e
+    image: ghcr.io/ronaldoamd9/tofa-trakt:1.0.1@sha256:c56133b7e51e9a953c90c25374f35817a0886082354e696ab8812f3240a57997
     init: true
     restart: unless-stopped
     read_only: true

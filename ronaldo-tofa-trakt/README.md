@@ -14,6 +14,10 @@ A interface é protegida pelo login do Umbrel através de `app_proxy`. O servido
 
 O Client ID padrão pertence ao aplicativo pessoal do Ronaldo, que aceita sua própria conta Trakt. Outra pessoa deve criar seu próprio aplicativo em https://developer.trakt.tv/apps e informar o Client ID no painel. Nenhum Client Secret é necessário no fluxo de dispositivo atual.
 
+## Migração da ponte avulsa anterior
+
+Ao iniciar ou atualizar pelo Umbrel, um hook identifica somente o contêiner `tofa-trakt-sync-1` do projeto `tofa-trakt`, confirma a origem da pasta de dados e o desliga. Importa as autorizações e o controle de envios, preserva os originais e salva um backup privado em `data/legacy-backup.tar.gz`. A migração ocorre uma única vez e não substitui contas já conectadas no novo app. Não é necessário informar a senha do terminal para essa migração pelo Umbrel.
+
 ## Antes de formatar
 
 Clique em **Baixar backup** no painel e guarde o `.tar.gz` fora do Umbrel. Ele inclui:
@@ -56,7 +60,7 @@ python -m venv .venv
 DATA_DIR=/tmp/tofa-trakt-dev BIND_HOST=127.0.0.1 PORT=8787 .venv/bin/python app/app.py
 ```
 
-A workflow `.github/workflows/tofa-trakt.yml` testa e publica a imagem em GHCR para amd64 e arm64. O manifesto usa a versão `1.0.0`; atualizações devem incrementar a versão da imagem e do manifesto juntas.
+A workflow `.github/workflows/tofa-trakt.yml` testa e publica a imagem em GHCR para amd64 e arm64. O manifesto usa a versão `1.0.1`; atualizações devem incrementar a versão da imagem e do manifesto juntas.
 
 ## Referências
 

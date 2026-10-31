@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ronaldo-tofa-trakt
 category: media
 name: Tofa para Trakt
-version: "1.0.0"
+version: "1.0.1"
 tagline: Assistindo agora e histórico do Tofa no Trakt
 port: 3431
 path: ""
@@ -33,5 +33,6 @@ icon: https://raw.githubusercontent.com/RONALDOAMD9/ronaldo-umbrel-apps/main/ron
 gallery:
   - https://raw.githubusercontent.com/RONALDOAMD9/ronaldo-umbrel-apps/main/ronaldo-tofa-trakt/screenshots/setup.jpg
 releaseNotes: >-
-  Primeira versão instalável: reprodução em tempo real via WebSocket,
-  histórico sem duplicados, vinculação por código e backup privado.
+  Migração automática da ponte avulsa anterior, com backup privado das
+  autorizações e controle de envios. Recupera a reprodução em andamento
+  após reiniciar o aplicativo.
