@@ -5,7 +5,7 @@ services:
       APP_HOST: ronaldo-tofa-trakt_server_1
       APP_PORT: 8787
   server:
-    image: ghcr.io/ronaldoamd9/tofa-trakt:1.0.1@sha256:c56133b7e51e9a953c90c25374f35817a0886082354e696ab8812f3240a57997
+    image: ghcr.io/ronaldoamd9/tofa-trakt:1.0.2@sha256:b4c44ad6fd13cbe5a4496300de69bcc30fb84c7f9075fabd9cf4a63a007239d8
     init: true
     restart: unless-stopped
     read_only: true
@@ -26,3 +26,9 @@ services:
       - ${APP_DATA_DIR}/data:/data
     tmpfs:
       - /tmp:size=16m,mode=1777
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8787/api/status', timeout=5).read()"]
+      interval: 30s
+      timeout: 10s
+      start_period: 15s
+      retries: 3
