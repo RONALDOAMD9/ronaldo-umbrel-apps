@@ -27,7 +27,7 @@ STATE = {'websocket': False, 'playing': False, 'title': None, 'progress': None,
          'ends_at': None, 'last_sync': None, 'history_error': None, 'live_error': None}
 PAIRING = {}
 SESSION = secrets.token_urlsafe(32)
-VERSION = '1.0.1'
+VERSION = '1.0.2'
 
 
 def config():
@@ -383,6 +383,10 @@ def initialize():
     # Umbrel may create bind-mount directories as root. Drop privileges after
     # assigning only this app's data directory and files to the app user.
     if os.geteuid() == 0 and os.environ.get('DROP_PRIVILEGES', '1') == '1':
+        # With DAC_OVERRIDE deliberately dropped, root cannot traverse a 700
+        # directory owned by uid 1000. Temporarily take ownership using CHOWN
+        # before scanning; hand it back before dropping the process uid.
+        os.chown(DATA, 0, 0)
         for p in DATA.iterdir():
             if p.is_file() and not p.is_symlink():
                 os.chown(p, 1000, 1000)
