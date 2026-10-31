@@ -60,7 +60,7 @@ python -m venv .venv
 DATA_DIR=/tmp/tofa-trakt-dev BIND_HOST=127.0.0.1 PORT=8787 .venv/bin/python app/app.py
 ```
 
-A workflow `.github/workflows/tofa-trakt.yml` testa e publica a imagem em GHCR para amd64 e arm64. O manifesto usa a versão `1.0.2`; atualizações devem incrementar a versão da imagem e do manifesto juntas.
+A workflow `.github/workflows/tofa-trakt.yml` testa e publica a imagem em GHCR para amd64 e arm64. O pacote Umbrel é `1.0.3`, com a imagem de execução `1.0.2` fixada por digest; atualizações devem incrementar a versão da imagem e do manifesto juntas.
 
 ## Referências
 

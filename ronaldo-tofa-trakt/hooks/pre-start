@@ -4,5 +4,5 @@ set -euo pipefail
 APP_DIR="$(readlink -f "$(dirname "${BASH_SOURCE[0]}")/..")"
 DATA_ROOT="${APP_DATA_ROOT:-${APP_DIR}/data}"
 if [[ -n "${UMBREL_ROOT:-}" ]]; then
-  python3 "${APP_DIR}/app/migrate_legacy.py" "${UMBREL_ROOT}/home/Tofa-Trakt" "${DATA_ROOT}"
+  python3 "${APP_DIR}/hooks/migrate_legacy.py" "${UMBREL_ROOT}/home/Tofa-Trakt" "${DATA_ROOT}"
 fi

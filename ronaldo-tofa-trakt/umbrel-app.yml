@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ronaldo-tofa-trakt
 category: media
 name: Tofa para Trakt
-version: "1.0.2"
+version: "1.0.3"
 tagline: Assistindo agora e histórico do Tofa no Trakt
 port: 3431
 path: ""
@@ -36,4 +36,5 @@ releaseNotes: >-
   Migração automática da ponte avulsa anterior, com backup privado das
   autorizações e controle de envios. Recupera a reprodução em andamento
   após reiniciar o aplicativo. Corrige as permissões da pasta privada
-  durante a reinicialização e verifica a saúde da interface.
+  durante a reinicialização e verifica a saúde da interface. Inclui o
+  auxiliar de migração na pasta de hooks atualizada pelo Umbrel.
