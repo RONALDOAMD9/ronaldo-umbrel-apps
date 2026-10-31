@@ -27,7 +27,7 @@ STATE = {'websocket': False, 'playing': False, 'title': None, 'progress': None,
          'ends_at': None, 'last_sync': None, 'history_error': None, 'live_error': None}
 PAIRING = {}
 SESSION = secrets.token_urlsafe(32)
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 
 
 def config():

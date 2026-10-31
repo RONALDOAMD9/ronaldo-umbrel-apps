@@ -30,6 +30,6 @@ jobs:
           context: ./ronaldo-tofa-trakt/app
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: ghcr.io/ronaldoamd9/tofa-trakt:1.0.0
+          tags: ghcr.io/ronaldoamd9/tofa-trakt:1.0.1
           cache-from: type=gha
           cache-to: type=gha,mode=max

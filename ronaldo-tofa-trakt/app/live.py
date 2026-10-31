@@ -69,6 +69,21 @@ class Live:
             if h:
                 s.update(media_id=h.get('media_id'), media_title=h.get('title'), profile_id=self.profile_id)
             self.sessions[s['session_id']] = s
+            if h and s.get('media_id'):
+                progress = self.bridge.tofa('/api/v1/media/' + s['media_file_id'] + '/progress')
+                # Seed from recent persisted progress once, rather than waiting
+                # for the next event after a restart during playback.
+                if progress and progress.get('updated_at'):
+                    updated = dt.datetime.fromisoformat(progress['updated_at'].replace('Z', '+00:00'))
+                    if 0 <= (dt.datetime.now(dt.timezone.utc) - updated).total_seconds() < 45:
+                        media = self.bridge.tofa('/api/v1/media/' + s['media_id'])
+                        file = next((f for f in media.get('files', []) if f['id'] == s['media_file_id']), {})
+                        duration = file.get('duration_ms') or 0
+                        if duration > 0:
+                            self.sessions[s['session_id']]['profile_id'] = progress.get('profile_id')
+                            self.event({'type': 'StreamProgress', 'session_id': s['session_id'],
+                                'user_id': self.user_id, 'position_ticks': progress['position_ms'] * 10000,
+                                'progress_pct': progress['position_ms'] / duration * 100})
 
     def pause(self):
         if self.active and self.started:
