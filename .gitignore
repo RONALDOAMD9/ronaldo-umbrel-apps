@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+**/data/
+**/*-tokens.json
+*.sqlite*
+*.tar.gz
+.env

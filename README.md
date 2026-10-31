@@ -16,3 +16,9 @@ Depois abra o aplicativo e vincule o servidor à sua conta Tofa. Ao adicionar a 
 Ícone oficial do Tofa: https://app.tofa.tv/logo.svg
 
 Referências: https://tofa.tv/install e https://github.com/getumbrel/umbrel-community-app-store
+
+## Tofa para Trakt
+
+Instale **Tofa para Trakt** nesta mesma loja para mostrar a reprodução em tempo real no Trakt e sincronizar os concluídos do Tofa. Abra o app na porta 3431 e vincule suas duas contas por código.
+
+Inclui backup privado para restaurar as autorizações e o controle de envios depois de uma formatação. O GitHub mantém o app reinstalável; seus tokens ficam nos dados do Umbrel. Veja [instalação, backup e funcionamento](ronaldo-tofa-trakt/README.md).

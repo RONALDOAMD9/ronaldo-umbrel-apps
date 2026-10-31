@@ -1,0 +1,37 @@
+manifestVersion: 1
+id: ronaldo-tofa-trakt
+category: media
+name: Tofa para Trakt
+version: "1.0.0"
+tagline: Assistindo agora e histórico do Tofa no Trakt
+port: 3431
+path: ""
+description: >-
+  Mostra no Trakt o filme ou episódio que você está assistindo no Tofa,
+  com progresso e previsão de término. Recebe os eventos de reprodução
+  do Tofa e registra no histórico apenas as sessões concluídas.
+
+
+  Inclui uma interface para vincular as contas por código, acompanhar o
+  estado da conexão e baixar ou restaurar um backup privado das autorizações
+  e do controle de duplicados. Após formatar o Umbrel, reinstale pela loja
+  e restaure o backup ou vincule novamente suas contas.
+
+
+  Aplicativo independente, sem afiliação com Tofa ou Trakt. O Client ID
+  padrão atende à conta pessoal do Ronaldo; outras contas precisam de
+  seu próprio aplicativo no Trakt Developer. Pausas são inferidas após
+  até 75 segundos sem avanço. O histórico é conferido a cada minuto.
+developer: Ronaldo
+website: https://github.com/RONALDOAMD9/ronaldo-umbrel-apps
+repo: https://github.com/RONALDOAMD9/ronaldo-umbrel-apps
+support: https://github.com/RONALDOAMD9/ronaldo-umbrel-apps/issues
+dependencies:
+  - ronaldo-tofa
+submitter: Ronaldo
+icon: https://raw.githubusercontent.com/RONALDOAMD9/ronaldo-umbrel-apps/main/ronaldo-tofa-trakt/icon.svg
+gallery:
+  - https://raw.githubusercontent.com/RONALDOAMD9/ronaldo-umbrel-apps/main/ronaldo-tofa-trakt/screenshots/setup.jpg
+releaseNotes: >-
+  Primeira versão instalável: reprodução em tempo real via WebSocket,
+  histórico sem duplicados, vinculação por código e backup privado.

@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: ronaldo-tofa-trakt_server_1
+      APP_PORT: 8787
+  server:
+    image: ghcr.io/ronaldoamd9/tofa-trakt:1.0.0
+    init: true
+    restart: unless-stopped
+    read_only: true
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETUID
+      - SETGID
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      TOFA_URL: http://host.docker.internal:33333
+      TRAKT_CLIENT_ID: cwgakpOPSKq-BD8yp1S6IDriLJIQjO0wgWYRU-xuX-8
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    tmpfs:
+      - /tmp:size=16m,mode=1777
